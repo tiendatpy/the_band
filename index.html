@@ -233,8 +233,81 @@
             </div>
         </div>
     </div>
-    <script src="../assets/javascript/slider.js"></script>
-    <script src="../assets/javascript/modal.js"></script>
-    <script src="../assets/javascript/menu.js"></script>
+    <!-- slider -->
+    <script>
+        let index = 0;
+        carousel();
+        function carousel() {
+            const item = document.getElementsByClassName('slider');
+            for (let i = 0; i < item.length; i++) {
+                item[i].style.display = "none";
+            }
+            if (index >= item.length) {
+                index = 0;
+            }
+            item[index].style.display = "block";
+            index++;
+            setTimeout(carousel, 4000);
+        }
+    </script>
+    <!-- modal -->
+    <script>
+        const btnBuys = document.querySelectorAll('.js-btn-ticket')
+        const modal = document.querySelector('.modal')
+        const btnClose = document.querySelectorAll('.js-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+        function ShowModal (){
+            modal.classList.add('open');
+        }
+        function HideModal (){
+            modal.classList.remove('open');
+        }
+        for (const btnBuy of btnBuys) {
+            btnBuy.addEventListener('click',ShowModal);
+        }
+        for (const btncls of btnClose){
+            btncls.addEventListener('click', HideModal);
+        }
+        modal.addEventListener('click', HideModal);
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+    <!-- menu -->
+    <script>
+        const header = document.getElementById('header')
+        const mobileMenu = document.getElementById('js-hambuger-menu')
+        const currentHeight = header.clientHeight;
+        // dong mo menu
+        mobileMenu.onclick = function () {
+            if(header.clientHeight === currentHeight) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+        // an menu khi click vao
+        let menuItems = document.querySelectorAll('.nav li a[href*="#"]');
+        for (let i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function (event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu) {
+                    event.preventDefault();
+                }
+                else {
+                    header.style.height = null;
+                }
+            }
+        }
+        // dong hien sub menu
+        const active = document.querySelector('.js-sub-menu')
+        var subMenu = document.querySelector('.subnav')
+        active.onclick = function () {
+            subMenu.classList.toggle('active');
+        }
+
+    </script>
 </body>
 </html>
