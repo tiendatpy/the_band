@@ -1,0 +1,100 @@
+@media (max-width: 1023px) {
+    .mobile-hamburger-menu{
+        display: none;
+    }
+    .footer .icon {
+        gap: 15px;
+    }
+    .footer .icon a {
+        font-size: 30px;
+    }
+    .footer p {
+        margin: 20px 0;
+    }
+}
+@media (max-width: 740px) {
+    #header{
+        overflow: hidden;
+    }
+    .active {
+        display: block !important; 
+    }
+    .w-full{
+        width: 100%;
+    }
+    .nav {
+        display: block;
+    }
+    .nav > li {
+        display: block;
+    }
+    .nav > li:first-child{
+        display: inline-block;
+    }
+    .nav .subnav {
+        position: static;
+        background-color: #333;
+    }
+    .nav .subnav a {
+        color: #fff;
+    }
+    .nav li:hover .subnav {
+        display: none;
+    }
+
+    .search-button {
+        display: none;
+    }
+    .mobile-hamburger-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .text-content {
+        display: none;
+    }
+    .hamburger-icon{
+        font-size: 15px;
+    }
+    /* about 3 col */
+    .about-3-col{
+        display: block;
+    }
+    .about-3-col .threecol-item {
+        width: 100%;
+    }
+    /* tour */
+    .tour-3col {
+        display: block;
+    }
+    .tour-3col .tour-item{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    /* contact */
+    .wrapper-contact {
+        display: block;
+    }
+    .wrapper-contact .right,
+    .wrapper-contact .left {
+        width: 100%;
+    }
+    .wrapper-contact .left {
+        margin-bottom: 16px;
+    }
+    .input-top {
+        display: block;
+    }
+    .input-top div{
+        width: 100%;
+    }
+    .input-top div:first-child {
+        margin-bottom: 10px;
+    }
+    .wrapper-contact {
+        padding: 32px 0;
+    }
+
+}

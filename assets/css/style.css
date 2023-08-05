@@ -1,0 +1,463 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.5;
+}
+ul {
+    list-style: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+input {
+    font-size: 16px;
+    font-family: inherit;
+    border-radius: 4px;
+}
+p{
+    margin: 15px 0;
+    font-size: 15px;
+}
+#main{
+
+}
+
+
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.nav {
+    display: inline-block;
+}
+.nav, .subnav{
+    list-style: none;
+}
+.nav > li{
+    display: inline-block;
+    position: relative;
+}
+.nav li:hover .subnav{
+    display: block;
+}
+.nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 24px;
+    color: #fff;
+    font-size: 15px;
+}
+.nav .subnav li:hover a,
+.nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+    z-index: 1;
+}
+.nav .nav-down{
+    font-size: 12px;
+}
+.nav .subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+.nav .subnav a{
+    color: #000;
+}
+.mobile-hamburger-menu {
+    display: none;
+}
+
+#header .search-button:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+.mobile-hamburger-menu:hover{
+    background-color: #ccc;
+}
+.mobile-hamburger-menu:hover .hamburger-icon{
+    color: #000;
+}
+
+.mobile-hamburger-menu,
+#header .search-button{
+    float: right;
+    padding: 0 21px;
+}
+
+.hamburger-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px !important;  
+}
+.pt-50p{
+    padding-bottom: 50%;
+}
+.slide-img {
+    position: relative;
+}
+.slide-img img{
+    position: absolute;
+    width: 100%;
+}
+.slider{
+    margin-top: 46px;
+    
+}
+.slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  
+}
+.slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+.slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+.container {
+
+}
+.format{
+    padding: 64px 16px;
+}
+.container .title{
+    text-align: center;
+}
+.container .title h1{
+    margin: 10px 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+.container .title p{
+    opacity: 0.6;
+}
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about-section .about-desc{
+    text-align: justify;
+}
+.about-3-col{
+    display: flex;
+    padding: 32px 0;
+}
+.about-3-col .threecol-item {
+    width: calc(100%/3);
+    text-align: center;
+}
+.about-3-col .threecol-item span{
+    display: block;
+}
+.about-3-col .threecol-item img{
+    border-radius: 4px;
+}
+/* Tour section */
+.cover-tour{
+    background-color: #000;
+}
+.tour-section{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.tour-section .ticket{
+    background-color: #fff;
+    list-style: none;
+}
+.tour-section .ticket li{
+    height: 40px;
+    padding: 8px 16px;
+    color: #757575;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ticket .sold-out{
+    display: inline-block;
+    padding: 0 8px;
+    margin-left: 16px;
+    background-color: #f44336;
+    color: #fff;
+    line-height: 24px;
+}
+.ticket .quantity{
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0 8px;
+    margin-right: 16px;
+}
+.tour-3col{
+    display: flex;
+    gap: 16px;
+    margin: 32px 0;
+}
+.tour-3col .tour-item{
+    width: calc(100%/3);
+}
+.tour-item img{
+    width: 100%;
+    display: block;
+}
+.tour-item img:hover{
+    opacity: 0.6;
+    transition: all 0.25s;
+}
+.tour-3col .tour-item .content-item{
+    background-color: #fff;
+    padding: 0 16px;
+}
+.tour-item .content-item strong{
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.tour-item .content-item .time {
+    opacity: 0.6;
+}
+.tour-item .content-item button{
+    padding: 10px 16px;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+.tour-item .content-item button:hover{
+    background-color: #ccc;
+    color: #000;
+}
+/* contact */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.wrapper-contact {
+    display: flex;
+}
+.wrapper-contact .left{
+    width: 50%;
+    font-size: 18px;
+}
+.wrapper-contact .left span{
+    padding-left: 10px;
+}
+.wrapper-contact .right{
+    width: 50%;
+}
+.wrapper-contact .right::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.wrapper-contact .right input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    height: 40px;
+}
+.input-top{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+.input-top input{
+    width: 100%;
+}
+.input-bottom input{
+    width: 100%;
+}
+.input-top div{
+    width: 50%;
+}
+.wrapper-contact .right button{
+    padding: 10px 16px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    margin: 16px 0;
+    float: right;
+}
+.wrapper-contact button:hover{
+    color: #000;
+    background-color: #ccc;
+}
+/* image-section */
+.image-section {
+    padding-top: 50%;
+    background: url(https://www.w3schools.com/w3images/map.jpg) top center/ cover no-repeat;
+    filter: grayscale(50%);
+}
+.footer{
+    text-align: center;
+    padding: 64px 0;
+    opacity: 0.6;
+    background-color: #f1f1f1;
+    color: #000;
+
+}
+.footer .icon{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.footer .icon a{
+    text-decoration: none;
+    font-size: 24px;
+    color: inherit;
+}
+.footer i:hover{
+    opacity: 0.6;
+}
+.footer p a{
+    font-size: 15px;
+    color: inherit;
+}
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+@keyframes aaaa{
+    
+}
+.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    width: 900px;
+    animation: ModalFadeIn ease 0.4s ;
+}
+@keyframes ModalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.headline-modal .close{
+    padding: 8px 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+.headline-modal .close:hover{
+    background-color: #ccc;
+    color: #000;
+}
+.headline-modal{
+    height: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #009688;
+    gap: 20px;
+    position: relative;
+}
+.ti-bag{
+    font-size: 30px;
+}
+.headline-modal h2{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+.body-modal {
+    padding: 0 16px;
+}
+.body-modal input{
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+.ti-shopping-cart, .ti-user {
+    font-weight: bold;
+    color: #009688;
+}
+.body-modal label{
+    display: block;
+    margin: 15px 0;
+}
+.body-modal button{
+    width: 100%;
+    padding: 16px;
+    background-color: #009688;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+.body-modal button:hover{
+    background-color: #ccc;
+    color: #000;
+}
+.footer-modal{
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-modal-close {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    margin: 16px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.footer-modal-close:hover{
+    background-color: #ccc;
+    color: #000;
+}
